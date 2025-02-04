@@ -1,0 +1,21 @@
+Exercise 1: Simple Calculator Function
+Write a function named calculator that takes three arguments: two numbers and an operator (+, -, *, /). Based on the operator provided, the function should return the result of the operation. If the operator is invalid, return "Invalid operator."
+
+Sample Input/Output:
+echo calculator(10, 5, '+'); // Output: 15
+echo calculator(10, 5, '/'); // Output: 2
+echo calculator(10, 5, '%'); // Output: Invalid operator
+
+Exercise 2: String Reversal Function
+Create a function called reverseString that accepts a string as a parameter and returns the string reversed.
+
+Sample Input/Output:
+echo reverseString("hello"); // Output: "olleh"
+echo reverseString("world"); // Output: "dlrow"
+
+Exercise 3: Factorial Function
+Write a function factorial that calculates the factorial of a number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n (i.e., n! = n * (n-1) * ... * 1).
+
+Sample Input/Output:
+echo factorial(5); // Output: 120
+echo factorial(7); // Output: 5040

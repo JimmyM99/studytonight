@@ -1,0 +1,23 @@
+1. Basic Array Manipulation Question:
+Write a PHP function that takes an array of integers and returns a new array with all elements doubled.
+
+Example Input:
+$arr = [1, 2, 3, 4, 5];
+Expected Output:
+[2, 4, 6, 8, 10]
+
+2. Finding the Maximum Element Question:
+Write a function that finds and returns the maximum number in an array without using built-in functions like max().
+
+Example Input:
+$arr = [10, 45, 3, 89, 32];
+Expected Output:
+89
+
+3. Reversing an Array Question:
+Write a function that reverses an array without using built-in functions like array_reverse().
+
+Example Input:
+$arr = [1, 2, 3, 4, 5];
+Expected Output:
+[5, 4, 3, 2, 1]
