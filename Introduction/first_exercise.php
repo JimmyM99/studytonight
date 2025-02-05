@@ -140,4 +140,51 @@ echo factorial(7); // Output: 5040
 echo "<h3>Odd or Even function</h3>";
 echo parity(122); // Output: "122 is an even number"
 echo parity(263); // Output: "263 is an odd number"
+
+function exists_in_array($element,$array = []){
+    $result = null;
+    if(is_array($array)){
+        foreach($array as $c){
+            if($c === $element){
+                $result="True<br/>";
+                break;
+            }else{
+                $result="False<br/>";
+            }
+        }
+        return $result;
+    }else{
+        return "The second parameter must be an array!<br/>";
+    }
+}
+
+$nums = array(1,2,3,4,5,6,7,8,9);
+$num = 7;
+
+echo exists_in_array($num,$nums);
+
+function flip($a = []){
+    $keys = array_keys($a);
+    $values = array_values($a);
+
+    for($i=0;$i<sizeof($a);$i++){
+        $flipped[$values[$i]] = $keys[$i];
+    }
+
+    return $flipped;
+}
+
+$lamborghinis = array("suv"=>"Urus", "sports"=>"Huracan", "coupe"=>"Aventador");
+$keys = array_keys($lamborghinis);
+echo "<h4>Unflipped Associative Array</h4>";
+for($i=0;$i<sizeof($lamborghinis);$i++){
+    echo $lamborghinis[$keys[$i]] ." => ". $keys[$i] ."<br/>";
+}
+
+$cars = flip($lamborghinis);
+$keys = array_keys($cars);
+echo "<h4>Flipped Associative Array</h4>";
+for($i=0;$i<sizeof($cars);$i++){
+    echo $cars[$keys[$i]] ." => ". $keys[$i] ."<br/>";
+}
 ?>
