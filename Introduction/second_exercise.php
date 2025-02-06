@@ -58,8 +58,9 @@ function sort_a($array)
         }
     }
 
-    return $array; // Return the sorted array
+    return $array; // Ret-urn-the sorted array
 }
+
 
 echo "<h4>Array before sort</h4>";
 $sort_a = array(9, 4, 7, 2, 6, 1, 5, 8, 3);

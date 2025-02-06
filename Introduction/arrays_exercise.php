@@ -133,6 +133,48 @@ function sort_a($array)
     return $array;
 }
 
+function implod($a,$b){
+    $string="";
+    for($i=0;$i<sizeof($b);$i++){
+        if($i==(sizeof($b)-1)){
+            $string = $string.$b[$i];
+        }else{
+            $string = $string.$b[$i].$a;
+        }   
+    }
+    return "$string";
+}
+
+function explod($a,$b,$c=null){
+    $space = 0;
+    $cond = 0;
+    for($i=0;$i<strlen($b);$i++){
+        if($b[$i] != $a){
+            if($cond==1){
+                break;
+            }
+            $space++;
+        }else{
+            $cond++;
+        }
+    }
+
+    $offset=0;
+    if($c === null){
+        $c = $space+1;
+    }
+    
+    for($i=0;$i<$c;$i++){
+        $result[$i] = substr($b, $offset, $space);
+        if($i==0){
+            $offset = $space+1;
+        }else{
+            $offset = $offset+$space+1;
+        }
+    }
+    return $result;
+}
+
 //Push Function Output
 $push = array(1, 2, 3, 4, 5, 6, 7, 8, 9);
 echo "<h4>Array before push</h4>";
@@ -165,7 +207,6 @@ $element = 16;
 exists_text($element, $in_array);
 
 //Pop Function Output
-echo "<br/>";
 $popped = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 echo "<h4>Array before pop</h4>";
 print_r($popped);
@@ -201,11 +242,36 @@ print_array($sort_b);
 print_array($sort_c);
 
 //single function that accepts two arguments and can change sort order
-$sort_d = array(8,12,24,46,64,12,42,10,88,12);
+$sort_d = array(8,14,24,46,64,12,42,10,88,34);
+
+echo "<h4>Sort function that accepts two arguments and can sort in either asc or desc order</h4>";
+echo "Before sort: ";print_array($sort_d);
 
 $sort_d = sort_any('desc',$sort_d);
-print_array($sort_d);
+echo "Descending: ";print_array($sort_d)."<br/";
 
 $sort_d = sort_any('asc',$sort_d);
+echo "Ascending: ";print_array($sort_d)."<br/";
+
+echo "<br/>";
+
+echo "<h4>Array before implode</h4>";
 print_array($sort_d);
+echo "<h4>String after implode</h4>";
+$ce = implod("-",$sort_d);
+echo $ce;
+
+echo "<br/>";
+
+echo "<h4>String before explode</h4>";
+echo "076-035-192-323";
+echo "<h4>String after explode</h4>";
+$de = explod("-","076-035-192-323");
+print_r($de);
+
+echo "<br/>";
+
+echo "<h4>String after explode with limiter</h4>";
+$de = explod("-","076-035-192-323",2);
+print_r($de);
 ?>
