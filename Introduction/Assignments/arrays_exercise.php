@@ -175,6 +175,8 @@ function explod($a,$b,$c=null){
     return $result;
 }
 
+echo '<div class="container">';
+echo '<div class="column"">';
 //Push Function Output
 $push = array(1, 2, 3, 4, 5, 6, 7, 8, 9);
 echo "<h4>Array before push</h4>";
@@ -233,6 +235,9 @@ print_array($sort_a);
 print_array($sort_b);
 print_array($sort_c);
 
+echo '</div>';
+echo '<div class="column">';
+
 echo "<h4>Array after sort (ascending order)</h4>";
 $sort_a = sort_a($sort_a);
 $sort_b = sort_a($sort_b);
@@ -274,4 +279,19 @@ echo "<br/>";
 echo "<h4>String after explode with limiter</h4>";
 $de = explod("-","076-035-192-323",2);
 print_r($de);
+
+echo '</div>';
+echo '</div>';
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link rel="stylesheet" href="arrays.css">
+</head>
+<body>
+</body>
+</html>
