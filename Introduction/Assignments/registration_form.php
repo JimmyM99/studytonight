@@ -1,5 +1,5 @@
 <?php 
-
+require_once 'conn.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,25 +13,25 @@
 <body>
     <div class="form-container">
     <h3>Register</h3>
-    <form action="registration_action.php" method="post">
+    <form action="registration_action.php" method="POST">
         <label for="fname">First Name: </label>
-        <input type="text" name="fname" placeholder="First Name..." required>
+        <input type="text" name="fname" placeholder="First Name...">
         <br>
         <br>
         <label for="lname">Last Name: </label>
-        <input type="text" name="lname" placeholder="Last Name..." required>
+        <input type="text" name="lname" placeholder="Last Name...">
         <br>
         <br>
         <label for="email">Email: </label>
-        <input type="email" name="email" placeholder="Email..." required>
+        <input type="email" name="email" placeholder="Email...">
         <br>
         <br>
         <label for="phone">Phone: </label>
-        <input type="tel" name="phone" placeholder="Phone..." required>
+        <input type="tel" name="phone" placeholder="Phone...">
         <br>
         <br>
         <label for="password">Password: </label>
-        <input type="password" name="password"  placeholder="Password..." required>
+        <input type="password" name="password"  placeholder="Password...">
         <br>
         <br>
         <button name="submit">Register</button>
