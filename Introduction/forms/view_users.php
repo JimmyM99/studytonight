@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>users</title>
+    <title>View Users</title>
   </head>
   <body>
     <div class="container">
@@ -32,7 +32,9 @@
             <th>No</th>
             <th>Name</th>
             <th>Email</th>
-            <th>Password</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Registered on</th>
             <th>Edit</th>
         </tr>
       </thead>
@@ -44,9 +46,11 @@
          <td><?php echo $row['id'] ?></td>
          <td><?php echo $row['first_name'] . " " . $row['last_name'] ?></td>
          <td><?php echo $row['email'] ?></td>
-         <td><?php echo $row['password'] ?></td>
-         <td><a href="view.php?id=<?=$row['id']?>" style="color:green;">View</a>
-         <a href="edit.php?id=<?=$row['id']?>" style="color:blue;">Edit</a>
+         <td><?php echo $row['phone'] ?></td>
+         <td><?php echo $row['address'] ?></td>
+         <td><?php echo $row['created_at'] ?></td>
+         <td><a href="view.php?id=<?=$row['id']?>" style="color:green;">View</a>&nbsp;&nbsp;
+         <a href="edit.php?id=<?=$row['id']?>" style="color:blue;">Edit</a>&nbsp;&nbsp;
          <a href="delete.php?id=<?=$row['id']?>" style="color:red;">Delete</a></td>
       </tr>
       <?php } ?>

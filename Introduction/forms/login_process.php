@@ -18,5 +18,5 @@ if(mysqli_num_rows($result) > 0){
     exit();
 }
 else{
-    echo "Wrong passsword and username";
+    echo "Wrong email and username";
 }
