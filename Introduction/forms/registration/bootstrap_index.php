@@ -11,6 +11,14 @@
     <title>users</title>
   </head>
   <body>
+    <div class="container">
+      <h2 class="mb-3 mt-3">Users</h2>
+      <hr class="mb-5">
+      <div class="alert alert-success">
+        <p>
+          <?php echo $_GET['insertMsg']; ?>
+        </p>
+      </div>
   <?php
     require "conn.php";
   $data = "SELECT * FROM users";
@@ -25,6 +33,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Password</th>
+            <th>Edit</th>
         </tr>
       </thead>
 
@@ -36,6 +45,9 @@
          <td><?php echo $row['first_name'] . " " . $row['last_name'] ?></td>
          <td><?php echo $row['email'] ?></td>
          <td><?php echo $row['password'] ?></td>
+         <td><a href="view.php?id=<?=$row['id']?>" style="color:green;">View</a>
+         <a href="edit.php?id=<?=$row['id']?>" style="color:blue;">Edit</a>
+         <a href="delete.php?id=<?=$row['id']?>" style="color:red;">Delete</a></td>
       </tr>
       <?php } ?>
     </tbody>
@@ -46,8 +58,7 @@
       echo "No data found";
   }
 ?>
-
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
 </body>
 </html>

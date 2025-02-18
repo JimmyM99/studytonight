@@ -22,6 +22,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Password</th>
+            <th>Edit</th>
         </tr>
       </thead>
 
@@ -33,6 +34,9 @@
          <td><?php echo $row['first_name'] . " " . $row['last_name'] ?></td>
          <td><?php echo $row['email'] ?></td>
          <td><?php echo $row['password'] ?></td>
+         <td><a href="" style="color:green;">View</a>
+         <a href="" style="color:blue;">Edit</a>
+         <a href="" style="color:red;">Delete</a></td>
       </tr>
       <?php } ?>
     </tbody>

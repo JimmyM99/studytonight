@@ -1,8 +1,8 @@
 <?php 
 require_once 'conn.php';
 
-$fname = $_POST["fname"];
-$lname = $_POST["lname"];
+$first_name = $_POST["first_name"];
+$last_name = $_POST["last_name"];
 $email = $_POST["email"];
 $phone = $_POST["phone"];
 $password = $_POST["password"];
@@ -12,12 +12,13 @@ $password = $_POST["password"];
 $passHash = md5($password);
 
 if (isset($_POST['submit'])) {
-    $insert = "INSERT into users(first_name,last_name,email,phone,password) VALUES ('$fname','$lname','$email','$phone','$passHash')";
+    $insert = "INSERT into users(first_name,last_name,email,phone,password) VALUES ('$first_name','$last_name','$email','$phone','$passHash')";
 
     $query = mysqli_query($con,$insert);
 
     if($query){
-        echo "Data submitted successfully.";
+        header("Location: bootstrap_index.php?insertMsg=Registration successful"); 
+        exit();
     }else{
         echo "Failed to submit data.";
     }
