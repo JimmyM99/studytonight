@@ -3,7 +3,7 @@
 //connecting to the database {hostname, username, password and database}
 $hostname = '127.0.0.1';
 $username = 'root';
-$pass = "J1m3y@123";
+$pass = "Pass1234";
 $database = "php_crud";
 
 //creating connection
