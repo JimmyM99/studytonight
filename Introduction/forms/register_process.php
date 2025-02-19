@@ -1,30 +1,31 @@
-<?php 
+<?php
 require_once 'conn.php';
 
-//Retrieve input values
-$first_name = $_POST["first_name"];
-$last_name = $_POST["last_name"];
-$email = $_POST["email"];
-$phone = $_POST["phone"];
-$address = $_POST["address"];
-$password = $_POST["password"];
+if (!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST['email']) && !empty($_POST['phone']) && !empty($_POST['address']) && !empty($_POST['password'])) {
+    //Retrieve input values
+    $first_name = $_POST["first_name"];
+    $last_name = $_POST["last_name"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $address = $_POST["address"];
+    $password = $_POST["password"];
 
-//Encrypt the password
-// $passHash = md5($password);
+    //Encrypt the password
+    $passHash = md5($password);
 
-if (isset($_POST['submit'])) {
     //Insert input into database
-    $insert = "INSERT into users(first_name,last_name,email,phone,address,password) VALUES ('$first_name','$last_name','$email','$phone','$address','$password')";
+    $insert = "INSERT into users(first_name,last_name,email,phone,address,password) VALUES ('$first_name','$last_name','$email','$phone','$address','$passHash')";
 
-    $query = mysqli_query($con,$insert);
+    $query = mysqli_query($con, $insert);
 
     //If insertion is successful
-    if($query){
+    if ($query) {
         //Redirect to page showing users
-        header("Location: view_users.php?insertMsg=Registration successful"); 
+        header("Location: view_users.php?insertMsg=Registration_successful");
         exit();
-    }else{
-        echo "Failed to submit data.";
+    } else {
+        header("Location: register.php?insertMsg=Failed_to_submit_data");
+        exit();
     }
 }
 ?>

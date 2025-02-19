@@ -14,6 +14,7 @@ require_once 'conn.php';
 <body>
     <div class="form-container">
     <h3>Register</h3>
+    
     <form action="register_process.php" method="POST">
         <label for="first_name" class="form-label">First Name: </label>
         <input type="text" name="first_name" placeholder="First Name..." class="form-control">
