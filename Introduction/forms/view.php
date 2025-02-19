@@ -22,5 +22,6 @@ if ($row) {
     echo '</h2></div></div>';
 } else {
     echo "No record found.";
+    echo '<a href="view_users.php">Return to Users</a>';
 }
 ?>
