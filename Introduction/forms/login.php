@@ -13,11 +13,13 @@
 <body style="text-align:center">
     <div class="form-container">
     <h3>Login</h3>
-    <div class="alert alert-danger">
-        <p>
-          <?php echo $_GET['insertMsg']; ?>
-        </p>
-    </div>
+    <?php if(isset($_GET['insertMsg'])){?>
+        <div class="alert alert-danger">
+          <p>
+            <?php echo $_GET['insertMsg']; ?>
+          </p>
+        </div>
+      <?php } ?>
     <form action="login_process.php" method="POST">
         <label for="email">Email</label>
         <input type="email" name="email" placeholder="Email..." required>

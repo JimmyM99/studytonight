@@ -1,10 +1,10 @@
 <?php
 require_once 'conn.php';
 
-if (!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST['email']) && !empty($_POST['phone']) && !empty($_POST['address']) && !empty($_POST['password'])) {
+if(!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST['email']) && !empty($_POST['phone']) && !empty($_POST['address']) && !empty($_POST['password'])) {
     //Retrieve input values
-    $first_name = $_POST["first_name"];
-    $last_name = $_POST["last_name"];
+    $first_name = mysqli_real_escape_string($con, $_POST["first_name"]);
+    $last_name = mysqli_real_escape_string($con, $_POST["last_name"]);
     $email = $_POST["email"];
     $phone = $_POST["phone"];
     $address = $_POST["address"];
@@ -21,10 +21,10 @@ if (!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST
     //If insertion is successful
     if ($query) {
         //Redirect to page showing users
-        header("Location: view_users.php?insertMsg=Registration_successful");
+        header("Location: view_users.php?insertMsg=Registration successful");
         exit();
     } else {
-        header("Location: register.php?insertMsg=Failed_to_submit_data");
+        header("Location: register.php?insertMsg=Failed to submit data");
         exit();
     }
 }

@@ -141,9 +141,15 @@
             <span data-feather="calendar"></span>
             This week
           </button>
-        </div>
+        </div> 
       </div>
-
+      <?php if(isset($_GET['insertMsg'])){?>
+        <div class="alert alert-success">
+          <p>
+            <?php echo $_GET['insertMsg']; ?>
+          </p>
+        </div>
+      <?php } ?>
       <h4>Dynamic data goes in here...</h4>
       <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
  

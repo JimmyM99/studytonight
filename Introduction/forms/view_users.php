@@ -14,11 +14,13 @@
     <div class="container">
       <h2 class="mb-3 mt-3">Users</h2>
       <hr class="mb-5">
-      <div class="alert alert-success">
-        <p>
-          <?php echo $_GET['insertMsg']; ?>
-        </p>
-      </div>
+      <?php if(isset($_GET['insertMsg'])){?>
+        <div class="alert alert-success">
+          <p>
+            <?php echo $_GET['insertMsg']; ?>
+          </p>
+        </div>
+      <?php } ?>
   <?php
     require "conn.php";
   $data = "SELECT * FROM users";
