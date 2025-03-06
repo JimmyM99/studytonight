@@ -52,8 +52,8 @@
          <td><?php echo $row['address'] ?></td>
          <td><?php echo $row['created_at'] ?></td>
          <td><a href="view.php?id=<?=$row['id']?>" style="color:green;">View</a>&nbsp;&nbsp;
-         <a href="edit.php?id=<?=$row['id']?>" style="color:blue;">Edit</a>&nbsp;&nbsp;
-         <a href="delete.php?id=<?=$row['id']?>" style="color:red;">Delete</a></td>
+         <a href="update.php?id=<?=$row['id']?>" style="color:blue;">Edit</a>&nbsp;&nbsp;
+         <a href="delete.php?id=<?=$row['id']?>" style="color:red;" id="btn-delete" onclick="return confirm('Are you sure you want to delete?')">Delete</a></td>
       </tr>
       <?php } ?>
     </tbody>
