@@ -30,7 +30,7 @@ $user_id = $_SESSION['user']['id'];
         <div class="container mt-2">
             <?php if (isset($_GET['insertMsg'])) { ?>
                 <div class="alert alert-success" style="height:0px;">
-                <p style="line-height: 0;">
+                    <p style="line-height: 0;">
                         <?php echo $_GET['insertMsg']; ?>
                     </p>
                 </div>
@@ -41,20 +41,20 @@ $user_id = $_SESSION['user']['id'];
 
                     <!-- Login/Create link if user is not logged in -->
                     <?php if (!isset($_SESSION['user'])) { ?>
-                    <div class="card mb-3 p-2">
+                        <div class="card mb-3 p-2">
 
-                        <?php $data_n = "SELECT * FROM users";
-                        $result = mysqli_query($con, $data_n);
-                        $count = mysqli_num_rows($result); ?>
+                            <?php $data_n = "SELECT * FROM users";
+                            $result = mysqli_query($con, $data_n);
+                            $count = mysqli_num_rows($result); ?>
 
-                        <h5 style="font-weight:bold;">DEV Community is a community of <?= $count ?> amazing developers
-                        </h5>
-                        We&apos;re a place where coders share, stay up-to-date and grow their careers.
+                            <h5 style="font-weight:bold;">DEV Community is a community of <?= $count ?> amazing developers
+                            </h5>
+                            We&apos;re a place where coders share, stay up-to-date and grow their careers.
 
-                        
+
                             <a href="register.php" class="btn btn-outline-primary">Create Account</a>
                             <a href="login.php" class="btn bg-transparent">Login</a>
-                    </div>
+                        </div>
                     <?php } ?>
                     <!-- Links -->
                     <div class="mb-3" id="links">
@@ -247,9 +247,12 @@ $user_id = $_SESSION['user']['id'];
                 <div class="col-lg-7 mb-3" id="middle">
 
                     <div class="mt-2 mb-3 ms-2">
-                        <a href="index.php" class="me-3" style="text-decoration:none;color:black;font-size:19px;cursor:pointer;">Relevant</a>
-                        <a href="latest.php" class="me-3" style="text-decoration:none;color:black;font-weight:bold;font-size:19px;cursor:pointer;">Latest</a>
-                        <a href="top.php" style="text-decoration:none;color:black;font-size:19px;cursor:pointer;">Top</a>
+                        <a href="index.php" class="me-3"
+                            style="text-decoration:none;color:black;font-size:19px;cursor:pointer;">Relevant</a>
+                        <a href="latest.php" class="me-3"
+                            style="text-decoration:none;color:black;font-weight:bold;font-size:19px;cursor:pointer;">Latest</a>
+                        <a href="top.php"
+                            style="text-decoration:none;color:black;font-size:19px;cursor:pointer;">Top</a>
                     </div>
 
                     <!-- Advertisement -->
@@ -526,6 +529,14 @@ $user_id = $_SESSION['user']['id'];
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $('#btnc').on('click', function (e) {
+            $('#adv').hide();
+        });
+    </script>
 </body>
 
 </html>

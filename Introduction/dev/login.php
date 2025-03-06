@@ -27,7 +27,7 @@ if (isset($_SESSION['user'])) {
   <link rel="stylesheet" href="form_css.css">
 </head>
 
-<body class="container p-4" style="text-align:center; width:1250px; background-color#f5f5f5">
+<body class="container p-4" style="text-align:center; width:1250px;">
   <div class="site-login mt-3">
     <div style="width: 45%; margin: 0 auto;">
       <!-- Heading -->

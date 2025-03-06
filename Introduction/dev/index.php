@@ -275,7 +275,7 @@ $user_id = $_SESSION['user']['id'];
 
                             <a href="https://dev.to/devteam/introducing-dev-2k6d?bb=160597">
                                 <img class="mb-3" src="/dev/assets/img/dev.png"
-                                    style="width: 100%; height: auto; border-radius:10px;">
+                                    style="width: 100%; height: auto; border-radius:10px; object-fit:cover;">
                             </a>
                             <h3><b>Heads up</b></h3>
 
@@ -325,7 +325,8 @@ $user_id = $_SESSION['user']['id'];
                                         <div>
                                             <!-- Profile image -->
                                             <img class="me-1" src="<?= $user['profile_image'] ?>"
-                                                style="width: 35px; height: 35px; border-radius:50%;" alt="profile image">
+                                                style="width: 35px; height: 35px; border-radius:50%; object-fit:cover;"
+                                                alt="profile image">
                                         </div>
                                         <div class="ms-1" style="line-height:1;">
                                             <span style="font-size: 15px;">
@@ -537,6 +538,14 @@ $user_id = $_SESSION['user']['id'];
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $('#btnc').on('click', function (e) {
+            $('#adv').hide();
+        });
+    </script>
 </body>
 
 </html>

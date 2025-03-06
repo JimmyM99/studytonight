@@ -31,7 +31,8 @@ $user_id = $_SESSION['user']['id'];
                     $rslt = mysqli_fetch_assoc($sol);
                     $total_bkmks = $rslt['total']; ?>
 
-                    <span class="ps-4" style="font-size: 20px; font-weight: bold;">Reading List ( <?= $total_bkmks ?> )</span>
+                    <span class="ps-4" style="font-size: 20px; font-weight: bold;">Reading List ( <?= $total_bkmks ?>
+                        )</span>
                 </div>
                 <div class="d-flex align-items-center">
                     <span>View Archive</span>
@@ -43,10 +44,10 @@ $user_id = $_SESSION['user']['id'];
                     <p style="font-size:20px; font-weight: bold;">All tags</p>
                     <hr>
                     <div class="ps-2" style="border:none; background-color:#f5f5f5;">
-                    <p>#javascript</p>
-                    <p>#news</p>
-                    <p>#opensource</p>
-                    <p>#webdev</p>
+                        <p>#javascript</p>
+                        <p>#news</p>
+                        <p>#opensource</p>
+                        <p>#webdev</p>
                     </div>
                 </div>
 
@@ -74,28 +75,28 @@ $user_id = $_SESSION['user']['id'];
                                     ?>
                                     <div class="card p-3 mb-3 shadow" style="background-color:lightcyan; height:120px; border:none;">
                                         <a href="read.php?id=<?= $post['id'] ?>" style="text-decoration:none; color:black;">
-                                        <div class="d-flex justify-content-between">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <img style="width: 50px; height: 50px; border-radius:50%;" class="me-1"
-                                                        src="<?= $post['post_image'] ?>">
-                                                </div>
-                                                <div class="ms-1">
-                                                    <span style="font-size: 15px;">
-                                                        <span style="font-weight:bold;" class="h4"><?= $post['title'] ?> </span>
-                                                        <br>
-                                                        <span style="font-size:15px;"><?= $user['username'] ?> </span>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <img style="width: 50px; height: 50px; border-radius:50%; object-fit:cover;"
+                                                            class="me-1" src="<?= $post['post_image'] ?>">
+                                                    </div>
+                                                    <div class="ms-1">
+                                                        <span style="font-size: 15px;">
+                                                            <span style="font-weight:bold;" class="h4"><?= $post['title'] ?> </span>
+                                                            <br>
+                                                            <span style="font-size:15px;"><?= $user['username'] ?> </span>
 
-                                                        <span style="color:gray;">&bull;</span>
+                                                            <span style="color:gray;">&bull;</span>
 
-                                                        <span style="color:gray;font-size:15px;"><?= $post['created_at'] ?> </span>
-                                                        <span style="color:gray;">&bull;</span> <br>
+                                                            <span style="color:gray;font-size:15px;"><?= $post['created_at'] ?> </span>
+                                                            <span style="color:gray;">&bull;</span> <br>
 
-                                                        # these #are #the #tags
-                                                    </span>
+                                                            # these #are #the #tags
+                                                        </span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
                                         </a>
                                     </div>
                                 <?php }

@@ -20,7 +20,7 @@ if (isset($_FILES['profile_image']) && !empty($_POST['first_name']) && !empty($_
                 exit();
             }
 
-            if ($_FILES["post_image"]["error"] !== UPLOAD_ERR_OK) {
+            if ($_FILES["profile_image"]["error"] !== UPLOAD_ERR_OK) {
                 echo "File upload error: " . $_FILES["profile_image"]["error"];
                 exit();
             }

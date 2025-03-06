@@ -11,39 +11,44 @@ require_once 'conn.php';
 
     <link rel="icon" type="image/png" href="assets/img/dev_logo.png" style="border: 1px solid black;">
     <title>Register</title>
-    
+
     <link rel="stylesheet" href="form_css.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
-<body style="background-color:#f5f5f5;">
-    <div class="container">
+<body class="container pt-5" style="background-color:#f5f5f5;">
     <div class="form-container">
-        <h3>Register</h3>
+        <div class="card" style="width: 35%; margin: 0 auto;">
 
-        <form action="register_process.php" method="POST" enctype="multipart/form-data">
-            <label for="profile_image" class="form-label">Profile Picture: </label>
-            <input type="file" name="profile_image" placeholder="Profile pic..." class="form-control p-3">
-            <hr>
-            <label for="first_name" class="form-label">First Name: </label>
-            <input type="text" name="first_name" placeholder="First Name..." class="form-control" required>
+            <div class="card-header" style="background-color:black; color:white;">
+                <h3 class="text-center" style="font-weight:bold;">REGISTRATION</h3>
+            </div>
+            <form action="register_process.php" method="POST" enctype="multipart/form-data">
+                <div class="card-body p-4">
+                    <label for="profile_image" class="form-label" style="font-weight:bold;">Profile Picture: </label>
+                    <input type="file" name="profile_image" placeholder="Profile pic..." class="form-control">
+                    <hr>
+                    <label for="first_name" class="form-label" style="font-weight:bold;">First Name: </label>
+                    <input type="text" name="first_name" placeholder="First Name..." class="form-control mb-2" required>
 
-            <label for="last_name" class="form-label">Last Name: </label>
-            <input type="text" name="last_name" placeholder="Last Name..." class="form-control" required>
+                    <label for="last_name" class="form-label" style="font-weight:bold;">Last Name: </label>
+                    <input type="text" name="last_name" placeholder="Last Name..." class="form-control mb-2" required>
 
-            <label for="username" class="form-label">Username: </label>
-            <input type="text" name="username" placeholder="Username..." class="form-control" required>
+                    <label for="username" class="form-label" style="font-weight:bold;">Username: </label>
+                    <input type="text" name="username" placeholder="Username..." class="form-control mb-2" required>
 
-            <label for="email" class="form-label">Email: </label>
-            <input type="email" name="email" placeholder="Email..." class="form-control" required>
+                    <label for="email" class="form-label" style="font-weight:bold;">Email: </label>
+                    <input type="email" name="email" placeholder="Email..." class="form-control mb-2" required>
 
-            <label for="password" class="form-label">Password: </label>
-            <input type="password" name="password" placeholder="Password..." class="form-control" required>
-
-            <button class="btn btn-primary form-control" name="submit">Register</button>
-        </form>
-    </div>
+                    <label for="password" class="form-label" style="font-weight:bold;">Password: </label>
+                    <input type="password" name="password" placeholder="Password..." class="form-control mb-2" required>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-dark form-control" name="submit">Register</button>
+                </div>
+            </form>
+        </div>
     </div>
     <!-- <a href="register_process .php">Go to action</a> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
